@@ -26,8 +26,8 @@ from sklearn.model_selection import StratifiedShuffleSplit
 
 
 
-algo_dic =  {'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP} 
-# 'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP 'ADERH':ADERH, }
+algo_dic =  {'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP,'ADERH':ADERH,} 
+# 'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP  }
 import glob
 import numpy as np
 
