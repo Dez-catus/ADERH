@@ -1,10 +1,15 @@
+import sys
+import keras
+import tensorflow as tf
+sys.modules['tensorflow.keras'] = keras
+
 from pyod.models.inne import INNE
 from pyod.models.iforest import IForest
 from pyod.models.dif import DIF
 from pyod.models.lof import LOF
 from pyod.models.loda import LODA
 from pyod.models.deep_svdd import DeepSVDD
-#from pyod.models.so_gaal import SO_GAAL
+from pyod.models.so_gaal import SO_GAAL
 from pyod.models.ecod import ECOD
 from pyod.models.ocsvm import OCSVM
 from pyod.models.copod import COPOD
@@ -21,7 +26,8 @@ from sklearn.model_selection import StratifiedShuffleSplit
 
 
 
-algo_dic =  {'ADERH':ADERH, 'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP  }
+algo_dic =  {'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP} 
+# 'INNE':INNE, 'IForest':IForest,  'LOF':LOF,'DIF':DIF,  'DeepSVDD':DeepSVDD, 'OCSVM':OCSVM, 'ECOD':ECOD, 'LODA':LODA, 'RCA':RCA, 'RDP':RDP 'ADERH':ADERH, }
 import glob
 import numpy as np
 
@@ -29,7 +35,7 @@ sss = StratifiedShuffleSplit(n_splits=3, test_size=0.3, random_state=0 )
 # algo_dic ={'ADERH_norm':ADERH}
 random_seeds = [0, 1, 2, 1000, 10000]
 
-for li in [glob.glob('data/Classical/*')]:
+for li in [glob.glob('data/datasets/Classical/*')]:
  for data_name in li:
 
     #if '9_c' in data_name:continue
